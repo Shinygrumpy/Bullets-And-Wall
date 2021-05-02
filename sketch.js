@@ -7,8 +7,9 @@ function setup() {
   createCanvas(1600,400);
   background.color = color(166,166,166);
 
-  speed = random(55,90);
-  weight = random(400,1500);
+  speed = random(200,320);
+  weight = random(30,52);
+  thickness = random(22,83);
 
   bullet = createSprite(50,200,80,10);
   //bullet.shapeColor = color (255,255,255);
@@ -44,7 +45,7 @@ drawSprites();
 
 }
 
-function hasCollided(){
+function hasCollided(bullet,wall){
 
   bulletRightEdge = bullet.x + bullet.width;
   wallLeftEdge = wall.x;
